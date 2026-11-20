@@ -1,0 +1,310 @@
+ configuração geral e detalheas em verde 
+:root{
+   --verde-escuro: #1b5e37;
+    --verde-principal: #27ae60;
+    --verde-medio: #219653;
+    --verde-claro: #eaf6ef;
+    --verde-borda: #c8e6d4;
+    --fundo-pagina: #f3f9f5;
+    --branco: #ffffff;
+    --texto-principal: #243028;
+    --texto-suave: #526358;
+}
+
+*{
+    margin:0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fundo-pagina);
+    color: var(--texto-principal);
+    line-height: 1.65;
+}
+ cabeçalho (icone ODS 3 bem no topo)
+
+.cabecalho-ods3 {
+    background: linear-gradient(135deg, var(--verde-principal), var(--verde-escuro));
+    color: var(--branco);
+    text-align : center;
+    padding: 2.5rem 1.5rem;
+    border-bottom: 5px solid var(--verde-medio);
+}
+.icone-ods3-topo {
+    width: 135px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 0 auto 1.25rem auto;
+    display: block;
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
+}
+
+.cabecalho-ods3 h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.85rem;
+    letter-spacing: 0.3px;
+}
+
+.cabecalho-ods3 p {
+    max-width: 780px;
+    margin: 0 auto 0.8rem auto;
+    font-size: 1.05rem;
+    color: #f4fbf7;
+}
+.cabecalho-ods3 p:last-child {
+    margin-bottom: 0;
+}
+ Menu de navegação
+
+ nav {
+    background-color: var(--verde-medio);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
+    padding: 0.85rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.98rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #e8fff1;
+}
+
+Estrutura principal e seções
+
+main {
+    max-width: 940px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: var(--branco);
+    padding: 2rem;
+    margin-bottom: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid var(--verde-borda);
+    border-top: 4px solid var(--verde-principal);
+    box-shadow: 0 5px 14px rgba(27, 94, 55, 0.06);
+}
+
+section h2 {
+    color: var(--verde-escuro);
+    font-size: 1.55rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.55rem;
+    border-bottom: 2px solid var(--verde-claro);
+}
+
+section p {
+    margin-bottom: 1rem;
+    color: var(--texto-principal);
+}
+
+section p:last-child {
+    margin-bottom: 0;
+}
+
+Srçãõ 2: texto e foto lado a lado 
+.conteudo-lado-a-lado {
+    display: flex;
+    align-items: center;
+    gap: 1.8rem;
+}
+
+.texto-lado {
+    flex: 1.3;
+}
+
+.imagem-lado {
+    flex: 1;
+}
+
+.imagem-lado img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    border: 2px solid var(--verde-borda);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+Srção 3 : beneficios imahem e frase ao laso 
+.linha-beneficio {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    background-color: var(--verde-claro);
+    border-left: 4px solid var(--verde-principal);
+    padding: 0.9rem 1.1rem;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 1rem;
+}
+
+.linha-beneficio:last-child {
+    margin-bottom: 0;
+}
+
+.linha-beneficio img {
+    width: 78px;
+    height: 78px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+    border: 2px solid var(--branco);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.frase-ao-lado {
+    flex: 1;
+}
+
+.frase-principal {
+    font-size: 1.05rem;
+    margin-bottom: 0.25rem;
+    color: var(--verde-escuro);
+}
+
+.frase-principal strong {
+    color: var(--verde-escuro);
+}
+
+.frase-detalhe {
+    font-size: 0.95rem;
+    color: var(--texto-suave);
+    margin-bottom: 0;
+}
+
+seção 4 : experiencia com a corrida 
+
+#experiencia img {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.2rem;
+    border: 2px solid var(--verde-borda);
+}
+
+seção 5 : corrida e qualidade de vida + galeria 
+
+.galeria-corrida {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.1rem;
+    margin-top: 1.4rem;
+}
+
+.galeria-corrida img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    border: 2px solid var(--verde-borda);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.09);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.galeria-corrida img:hover {
+    transform: translateY(-4px);
+    border-color: var(--verde-principal);
+}
+
+seção 6: cartão de incentivo 
+
+.cartao-incentivo {
+    background-color: var(--verde-claro);
+    border: 2px solid var(--verde-borda);
+    border-radius: 14px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    margin-top: 1.2rem;
+}
+
+.titulo-incentivo {
+    font-size: 1.6rem;
+    color: var(--verde-escuro);
+    margin-bottom: 1.2rem;
+}
+
+.cartao-incentivo img {
+    width: 100%;
+    max-width: 600px;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1.4rem;
+    border: 2px solid var(--branco);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.1);
+}
+
+.subtitulo-incentivo {
+    font-size: 1.3rem;
+    color: var(--verde-escuro);
+    margin-bottom: 0.75rem;
+}
+
+.texto-incentivo {
+    max-width: 560px;
+    margin: 0 auto;
+    font-size: 1.05rem;
+    color: var(--verde-escuro);
+}
+
+RODAPÉ
+
+footer {
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2.5rem;
+    font-size: 0.92rem;
+    border-top: 4px solid var(--verde-principal);
+}
+
+reaponsividade celular e tablet
+@media (max-width: 768px) {
+    .cabecalho-ods3 h1 {
+        font-size: 1.8rem;
+    }
+
+    .conteudo-lado-a-lado {
+        flex-direction: column;
+    }
+
+    .imagem-lado {
+        width: 100%;
+    }
+
+    .imagem-lado img {
+        height: 290px;
+    }
+
+    .linha-beneficio {
+        align-items: flex-start;
+    }
+}
