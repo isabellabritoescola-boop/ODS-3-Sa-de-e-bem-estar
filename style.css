@@ -1,267 +1,406 @@
-/* Fundo geral e cor padrão do texto */
-body {
-    background-color: #eef5ef;
-    color: #1f2d24;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+/* ==========================================================
+   Projeto ODS 3 - identidade clean em verde
+   Princípios aplicados:
+   1. Hierarquia visual clara (tamanhos e pesos de fonte)
+   2. Espaçamento consistente (escala de 8px)
+   3. Contraste legível (texto branco / escuro sobre verde)
+   4. Linhas de texto curtas (confortável de ler)
+   5. Mesmo raio de borda e sombra em todos os elementos
+   6. Navegação sempre visível, foco visível e responsivo
+   ========================================================== */
+
+:root {
+    /* Cores do projeto */
+    --verde-escuro: #1b5e20;
+    --verde: #2e7d32;
+    --verde-medio: #388e3c;
+    --verde-claro: #a5d6a7;
+    --verde-bem-claro: #e8f5e9;
+    --texto-claro: #f1fbf4;
+    --texto-escuro: #17331b;
+
+    /* Espaçamento (escala de 8px) */
+    --e1: 8px;
+    --e2: 16px;
+    --e3: 24px;
+    --e4: 32px;
+    --e6: 48px;
+    --e8: 64px;
+
+    /* Forma */
+    --raio: 12px;
+    --sombra: 0 4px 16px rgba(0, 0, 0, 0.18);
+
+    --fonte: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-/* Cabeçalho verde centralizado com ícone no topo */
-.cabecalho-ods3 {
-    background-color: #2e7d32;
-    color: #ffffff;
-    text-align: center;
-    padding: 28px 20px;
+* { box-sizing: border-box; }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 72px;
 }
+
+body {
+    margin: 0;
+    font-family: var(--fonte);
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--texto-claro);
+    background-color: var(--verde);
+    background-image: linear-gradient(160deg, #3a9140 0%, #2e7d32 40%, #1f6a25 75%, #1b5e20 100%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; }
+
+a:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* ---------- Navbar ---------- */
+.menu-links {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--e2);
+    padding: var(--e1) var(--e3);
+    background-color: var(--verde-escuro);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: var(--e1);
+    flex-shrink: 0;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: var(--e1) 0;
+}
+
+.marca img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
+
+.menu-lista {
+    display: flex;
+    gap: 4px;
+}
+
+.menu-lista a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1;
+    padding: 12px 14px;
+    border-radius: 8px;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.menu-lista a:hover {
+    background-color: rgba(255, 255, 255, 0.16);
+}
+
+/* ---------- Cabeçalho ---------- */
+.cabecalho-ods3 {
+    padding: var(--e8) var(--e3) var(--e6);
+}
+
+.cabecalho-conteudo {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: var(--e6);
+}
+
+.topo-icone { flex: 0 0 320px; }
 
 .topo-icone img {
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 2px solid #ffffff;
-    margin: 0 auto 12px auto;
     display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--raio);
+    border: 3px solid #ffffff;
+    box-shadow: var(--sombra);
 }
 
+.cabecalho-texto { flex: 1; }
+
 .cabecalho-ods3 h1 {
-    background-color: #2e7d32;
+    margin: 0 0 var(--e3);
+    font-size: 44px;
+    line-height: 1.15;
+    font-weight: 700;
+    letter-spacing: -0.5px;
     color: #ffffff;
-    font-size: 28px;
-    margin: 0 0 12px 0;
 }
 
 .cabecalho-ods3 p {
-    background-color: #2e7d32;
-    color: #f1fbf4;
-    max-width: 720px;
-    margin: 0 auto 10px auto;
-    font-size: 14px;
-    line-height: 1.5;
+    margin: 0 0 var(--e2);
+    max-width: 58ch;
+    font-size: 17px;
+    color: var(--texto-claro);
 }
 
-/* Barra de links logo abaixo do cabeçalho */
-.menu-links {
-    background-color: #256b29;
+.cabecalho-ods3 p:first-of-type {
+    font-size: 19px;
     color: #ffffff;
-    text-align: center;
-    padding: 10px 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.menu-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    margin: 0 10px;
-}
+.cabecalho-ods3 p:last-child { margin-bottom: 0; }
 
-/* Barra de links logo abaixo do cabeçalho */
-.menu-links {
-    background-color: #256b29;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px 14px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.menu-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: bold;
-    margin: 0 10px;
-}
-
-/* Área principal */
+/* ---------- Área principal ---------- */
 main {
-    max-width: 780px;
-    margin: 18px auto;
-    padding: 0 14px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 var(--e3);
 }
 
-/* Cartões das seções */
-section {
-    background-color: #ffffff;
-    color: #1f2d24;
-    border: 1px solid #b7dfb9;
-    border-radius: 8px;
-    padding: 18px 20px;
-    margin-bottom: 16px;
-}
+section { margin-bottom: var(--e8); }
 
 section h2 {
-    background-color: #ffffff;
-    color: #1b5e20;
-    font-size: 18px;
-    margin: 0 0 12px 0;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #d7eed8;
+    margin: 0 0 var(--e4);
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #ffffff;
 }
 
 section p {
-    color: #243329;
-    font-size: 14px;
-    line-height: 1.5;
-    margin: 0 0 10px 0;
-}
-/* Seção 2: texto à esquerda e foto à direita */
-.conteudo-lado-a-lado {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+    margin: 0 0 var(--e2);
+    max-width: 60ch;
+    color: var(--texto-claro);
 }
 
-.texto-lado {
-    flex: 1;
-}
-
-.imagem-lado img {
-    width: 150px;
-    height: 135px;
-    object-fit: cover;
-    object-position: top;
-    border-radius: 8px;
-    border: 1px solid #a5d6a7;
-    display: block;
-}
-/* Seção 3: cartões verdes claros com imagem pequena e texto ao lado */
-.linha-beneficio {
-    background-color: #eff7ef;
-    color: #1b5e20;
-    border: 1px solid #b7dfb9;
-    border-radius: 8px;
-    padding: 8px 12px;
-    margin-bottom: 8px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.linha-beneficio img {
-    width: 54px;
-    height: 54px;
-    object-fit: cover;
-    border-radius: 6px;
-    flex-shrink: 0;
-    border: 1px solid #a5d6a7;
-}
-
-.frase-principal {
-    background-color: #eff7ef;
-    color: #1b5e20;
-    font-size: 14px;
-    margin: 0 0 2px 0;
-}
-
-.frase-detalhe {
-    background-color: #eff7ef;
-    color: #2d4632;
-    font-size: 13px;
-    margin: 0;
-}
-/* Seção 4: imagem à esquerda e texto à direita */
+/* ---------- Seções 2 e 4: imagem grande à esquerda, texto à direita ---------- */
+.conteudo-lado-a-lado,
 .experiencia-lado-a-lado {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: var(--e6);
 }
 
+.imagem-lado { flex: 0 0 48%; }
+
+.imagem-lado img,
 .experiencia-lado-a-lado img {
-    width: 165px;
-    height: 115px;
-    object-fit: cover;
-    border-radius: 8px;
-    flex-shrink: 0;
-    border: 1px solid #a5d6a7;
     display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
 }
-/* Seção 5: 3 imagens lado a lado */
-.galeria-corrida {
+
+.experiencia-lado-a-lado img { flex: 0 0 48%; width: 48%; }
+
+.texto-lado { flex: 1; }
+.texto-lado p:last-child { margin-bottom: 0; }
+
+/* ---------- Seção 3: cards lado a lado ---------- */
+.grade-beneficios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--e3);
+}
+
+.linha-beneficio {
     display: flex;
-    justify-content: space-between;
-    gap: 12px;
-    margin-top: 12px;
+    align-items: center;
+    gap: var(--e2);
+    padding: var(--e3);
+    background-color: var(--verde-claro);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
+}
+
+.linha-beneficio img {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.frase-principal {
+    margin: 0 0 4px;
+    font-size: 19px;
+    line-height: 1.3;
+    color: var(--verde-escuro);
+}
+
+.frase-detalhe {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--texto-escuro);
+}
+
+/* ---------- Seção 5: galeria ---------- */
+.galeria-corrida {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--e3);
+    margin-top: var(--e4);
 }
 
 .galeria-corrida img {
-    width: 32%;
-    height: 155px;
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 5;
     object-fit: cover;
     object-position: top;
-    border-radius: 8px;
-    border: 1px solid #a5d6a7;
-    display: block;
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
 }
-/* Seção 6: bloco de incentivo */
+
+/* ---------- Seção 6: incentivo ---------- */
 .cartao-incentivo {
-    background-color: #eff7ef;
-    color: #1b5e20;
-    border: 1px solid #b7dfb9;
-    border-radius: 8px;
-    padding: 16px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: var(--e6) var(--e4);
     text-align: center;
+    background-color: var(--verde-claro);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra);
 }
 
 .titulo-incentivo {
-    background-color: #eff7ef;
-    color: #1b5e20;
-    font-size: 16px;
-    margin: 0 0 10px 0;
+    margin: 0 auto var(--e3);
+    font-size: 32px;
+    line-height: 1.2;
+    color: var(--verde-escuro);
 }
 
 .faixa-incentivo-destaque {
-    background-color: #2e7d32;
-    color: #ffffff;
-    max-width: 320px;
-    margin: 0 auto 12px auto;
-    padding: 14px 16px;
-    border-radius: 8px;
+    max-width: 380px;
+    margin: 0 auto var(--e3);
+    padding: var(--e2) var(--e3);
+    background-color: var(--verde);
+    border-radius: var(--raio);
 }
 
 .subtitulo-incentivo {
-    background-color: #2e7d32;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 1.4;
     color: #ffffff;
-    font-size: 18px;
-    line-height: 1.35;
-    margin: 0;
 }
 
 .texto-incentivo {
-    background-color: #eff7ef;
-    color: #243329;
-    max-width: 340px;
+    max-width: 44ch;
     margin: 0 auto;
-    font-size: 13px;
+    font-size: 16px;
+    color: var(--texto-escuro);
 }
-/* Rodapé verde */
+
+/* ---------- Rodapé ---------- */
 footer {
-    background-color: #2e7d32;
-    color: #ffffff;
+    padding: var(--e4) var(--e3);
     text-align: center;
-    padding: 14px;
-    font-size: 13px;
+    font-size: 14px;
+    background-color: rgba(10, 40, 14, 0.35);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-footer p {
-    background-color: #2e7d32;
-    color: #ffffff;
-    margin: 0;
-}
+footer p { margin: 0; color: var(--texto-claro); }
 
-/* Responsivo para celular */
-@media (max-width: 650px) {
+/* ---------- Tablet ---------- */
+@media (max-width: 860px) {
     .conteudo-lado-a-lado,
-    .experiencia-lado-a-lado,
-    .galeria-corrida {
-        flex-direction: column;
-        align-items: center;
+    .experiencia-lado-a-lado { gap: var(--e4); }
+
+    .cabecalho-conteudo { gap: var(--e4); }
+    .topo-icone { flex-basis: 220px; }
+    .cabecalho-ods3 h1 { font-size: 36px; }
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 650px) {
+    body { font-size: 16px; }
+
+    .menu-links {
+        gap: var(--e1);
+        padding: 0 var(--e1);
     }
 
-    .galeria-corrida img {
-        width: 100%;
-        max-width: 240px;
+    .marca {
+        gap: 4px;
+        font-size: 15px;
     }
+
+    .marca img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .menu-lista {
+        flex: 1;
+        min-width: 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    .menu-lista a { padding: 12px 10px; }
+
+    .menu-lista::-webkit-scrollbar { display: none; }
+
+    .cabecalho-ods3 { padding: var(--e6) var(--e2) var(--e4); }
+
+    .cabecalho-conteudo {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .topo-icone {
+        flex: none;
+        width: 200px;
+        max-width: 100%;
+        align-self: center;
+    }
+
+    .cabecalho-ods3 h1 { font-size: 30px; }
+    .cabecalho-ods3 p:first-of-type { font-size: 17px; }
+
+    main { padding: 0 var(--e2); }
+    section { margin-bottom: var(--e6); }
+    section h2 { font-size: 25px; margin-bottom: var(--e3); }
+
+    .conteudo-lado-a-lado,
+    .experiencia-lado-a-lado {
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--e3);
+    }
+
+    .imagem-lado { flex: none; }
+    .experiencia-lado-a-lado img { flex: none; width: 100%; }
+
+    .grade-beneficios,
+    .galeria-corrida { grid-template-columns: 1fr; }
+
+    .galeria-corrida img { aspect-ratio: 4 / 3; }
+
+    .cartao-incentivo { padding: var(--e4) var(--e2); }
+    .titulo-incentivo { font-size: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
 }

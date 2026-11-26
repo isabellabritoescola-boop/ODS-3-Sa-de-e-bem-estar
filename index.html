@@ -1,47 +1,55 @@
-
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corrida e Qualidade de Vida - ODS 3</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
 
-    <header class="cabecalho-ods3">
-        <div class="topo-icone">
-            <img src="imagem da ods3.webp" alt="Ícone oficial da ODS 3 - Saúde e Bem-Estar">
+    <nav class="menu-links" aria-label="Navegação principal">
+        <a class="marca" href="#sobre-ods" aria-label="ODS 3 - Saúde e Bem-Estar">
+            <img src="imagem da ods3.webp" alt="">
+            <span>ODS 3</span>
+        </a>
+        <div class="menu-lista">
+            <a href="#sobre-ods">O que é</a>
+            <a href="#importancia-corrida">Importância</a>
+            <a href="#beneficios">Benefícios</a>
+            <a href="#experiencia">Minha experiência</a>
+            <a href="#corrida">Qualidade de vida</a>
+            <a href="#mensagem-incentivo">Mensagem final</a>
         </div>
-
-        <h1>1. Sobre a ODS 3</h1>
-
-        <p>A ODS 3 faz parte dos Objetivos de Desenvolvimento Sustentável da ONU e tem como objetivo garantir uma vida saudável e promover o bem-estar para todas as pessoas, em todas as idades.</p>
-        <p>Cuidar da saúde é muito importante, e pequenas atitudes no dia a dia podem fazer uma grande diferença. Praticar atividades físicas, ter uma boa alimentação e cuidar da saúde mental são algumas maneiras de construir uma vida melhor.</p>
-    </header>
-
-    <nav class="menu-links">
-        <a href="#sobre-ods">O-que-é</a>
-        <a href="#importancia-corrida">Metas</a>
-        <a href="#corrida">Corrida-e-Qualidade-de-Vida</a>
-        <a href="#beneficios">Importância</a>
     </nav>
+
+    <header class="cabecalho-ods3" id="sobre-ods">
+        <div class="cabecalho-conteudo">
+            <div class="topo-icone">
+                <img src="ods3 desafio.png" alt="Objetivo de Desenvolvimento Sustentável 3: Saúde e Bem-Estar">
+            </div>
+            <div class="cabecalho-texto">
+                <h1>1. Sobre a ODS 3</h1>
+                <p>A ODS 3 faz parte dos Objetivos de Desenvolvimento Sustentável da ONU e tem como objetivo garantir uma vida saudável e promover o bem-estar para todas as pessoas, em todas as idades.</p>
+                <p>Cuidar da saúde é muito importante, e pequenas atitudes no dia a dia podem fazer uma grande diferença. Praticar atividades físicas, ter uma boa alimentação e cuidar da saúde mental são algumas maneiras de construir uma vida melhor.</p>
+            </div>
+        </div>
+    </header>
 
     <main>
 
-        <!-- Seção 2 -->
+        <!-- Seção 2: imagem grande à esquerda, texto à direita -->
         <section id="importancia-corrida">
             <h2>2. A importância da corrida para a saúde</h2>
 
             <div class="conteudo-lado-a-lado">
+                <div class="imagem-lado">
+                    <img src="corrida de rua.jpg" alt="Foto correndo na rua">
+                </div>
+
                 <div class="texto-lado">
                     <p>A corrida é uma atividade física que traz diversos benefícios para o corpo e para a mente. Além de ajudar a melhorar o condicionamento físico, ela contribui para a saúde do coração, fortalece os músculos e melhora a resistência do organismo.</p>
                     <p>Correr também pode ajudar a aliviar o estresse, melhorar o humor e proporcionar momentos de tranquilidade. Não é necessário começar correndo longas distâncias: cada pessoa pode respeitar seu próprio ritmo e evoluir aos poucos.</p>
-                </div>
-
-                <div class="imagem-lado">
-                    <img src="corrida de rua.jpg" alt="Foto correndo na rua">
                 </div>
             </div>
         </section>
@@ -50,40 +58,42 @@
         <section id="beneficios">
             <h2>3. Benefícios da corrida</h2>
 
-            <div class="linha-beneficio">
-                <img src="imagem do coraçao.webp" alt="imagem do coração">
-                <div class="frase-ao-lado">
-                    <p class="frase-principal"><strong>Saúde do coração</strong></p>
-                    <p class="frase-detalhe">Ajuda a melhorar a circulação sanguínea e fortalece o sistema cardiovascular.</p>
+            <div class="grade-beneficios">
+                <div class="linha-beneficio">
+                    <img src="imagem do coraçao.webp" alt="imagem do coração">
+                    <div class="frase-ao-lado">
+                        <p class="frase-principal"><strong>Saúde do coração</strong></p>
+                        <p class="frase-detalhe">Ajuda a melhorar a circulação sanguínea e fortalece o sistema cardiovascular.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="linha-beneficio">
-                <img src="saude mental.webp" alt="mulher e homem correndo">
-                <div class="frase-ao-lado">
-                    <p class="frase-principal"><strong>Saúde mental</strong></p>
-                    <p class="frase-detalhe">Ajuda a aliviar o estresse, melhorar o humor e proporcionar bem-estar.</p>
+                <div class="linha-beneficio">
+                    <img src="saude mental.webp" alt="mulher e homem correndo">
+                    <div class="frase-ao-lado">
+                        <p class="frase-principal"><strong>Saúde mental</strong></p>
+                        <p class="frase-detalhe">Ajuda a aliviar o estresse, melhorar o humor e proporcionar bem-estar.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="linha-beneficio">
-                <img src="fortalecimento das pernas.avif" alt="imagem dos musculos das pernas ">
-                <div class="frase-ao-lado">
-                    <p class="frase-principal"><strong>Fortalecimento</strong></p>
-                    <p class="frase-detalhe">Contribui para fortalecer músculos, ossos e melhorar a resistência física.</p>
+                <div class="linha-beneficio">
+                    <img src="fortalecimento das pernas.avif" alt="imagem dos musculos das pernas ">
+                    <div class="frase-ao-lado">
+                        <p class="frase-principal"><strong>Fortalecimento</strong></p>
+                        <p class="frase-detalhe">Contribui para fortalecer músculos, ossos e melhorar a resistência física.</p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="linha-beneficio">
-                <img src="mulher correndo.jpg" alt="mulher correndo ">
-                <div class="frase-ao-lado">
-                    <p class="frase-principal"><strong>Mais disposição</strong></p>
-                    <p class="frase-detalhe">Pode melhorar a qualidade do sono e aumentar a disposição para as atividades diárias.</p>
+                <div class="linha-beneficio">
+                    <img src="mulher correndo.jpg" alt="mulher correndo ">
+                    <div class="frase-ao-lado">
+                        <p class="frase-principal"><strong>Mais disposição</strong></p>
+                        <p class="frase-detalhe">Pode melhorar a qualidade do sono e aumentar a disposição para as atividades diárias.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção 4 -->
+        <!-- Seção 4: imagem grande à esquerda, texto à direita -->
         <section id="experiencia">
             <h2>4. Minha experiência com a corrida</h2>
 
@@ -105,12 +115,12 @@
 
             <div class="galeria-corrida">
                 <img src="imagem da seçao 5.webp" alt="mulher correndo ">
-                <img src="imagem da seçao 5 2.jpg" alt="melher correndo 2 ">
-                <img src="imagem da secao 5 3.jpg" alt="mulher correndo  3">
+                <img src="imagem da seçao 5 2.jpg" alt="mulher correndo 2 ">
+                <img src="imagem da secao 5 3.jpg" alt="mulher correndo 3">
             </div>
         </section>
 
-        <!-- Seção 6 -->
+        <!-- Seção 6: número de corrida -->
         <section id="mensagem-incentivo">
             <h2>6. Uma mensagem para incentivar as pessoas</h2>
 
